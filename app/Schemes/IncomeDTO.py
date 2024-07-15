@@ -14,7 +14,7 @@ class TypeEnum(str, Enum):
 class AddIncomeDTO(BaseModel):
 
     title: str
-    coast: Decimal
+    value: Decimal
     type: TypeEnum
     date: datetime
 

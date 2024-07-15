@@ -1,5 +1,8 @@
+from datetime import datetime
+
 from pydantic import BaseModel, EmailStr, Field
 
+from app.Schemes.ExpenseDTO import ExpenseDTO
 from app.Schemes.IncomeDTO import IncomeDTO
 
 
@@ -14,3 +17,4 @@ class UserDTO(BaseModel):
     id: int
     incomes: list[IncomeDTO] = []
     expenses: list[ExpenseDTO] = []
+    created_at: datetime
